@@ -1,0 +1,47 @@
+Q1
+
+
+Hôtel			NumHôtel , NomH , AdresseH , CPH , TélH
+
+Chambre 		NumChambre , NumTél
+
+classe			NbreEtoiles , Caractéristiques
+
+catégorie		CodeCat , Description
+
+Client			Nom , Prénom , Adresse , Ville , CP , Pays , Tél , Email
+
+Prestation		NumConso , DateConso , HConso
+
+Facture			PrixChambre , QuantitéPrestations
+
+Réservation		NumRéserve , DateDébut , DateFin , DatePayeArrhes , MontantArrhes
+
+
+
+Q2 / Q3
+
+
+Hôtel < - Comprend - > Chambre
+	0 - N -->	<-- 1 - 1
+
+Hôtel < - décrit - > classe
+	1 - 1 -->	<-- 1 - N
+
+Chambre < - décrit - > catégorie
+	1 - 1 -->	<-- 1 - N
+
+Chambre < - Concerne - > Réservation
+	0 - 1 -->	<-- 1 - 1
+
+Client < - effectue - > Réservation
+	1 - 1 -->	<-- 1 - 1
+
+Client < - occupe - > Chambre
+	1 - 1 -->	<-- 0 - N
+
+Client < - paye - > Facture
+	1 - 1 -->	<-- 1 - 1
+
+Client < - profite - > Prestation
+	0 - N -->	<-- 1 - N
